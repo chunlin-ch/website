@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --color-void: #0A0A0A;
-    --color-charcoal: #121212;
-    --color-starlight: #F4F4F5;
-    --color-electric: #6366F1;
-  }
-
   body {
-    @apply bg-void text-starlight antialiased;
+    @apply bg-bg text-text antialiased;
     font-feature-settings: "cv11", "ss01";
   }
+
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
-/* Glassmorphism utility */
-.glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+/* Custom scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-br from-electric to-pink-500;
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full hover:bg-muted transition-colors;
 }

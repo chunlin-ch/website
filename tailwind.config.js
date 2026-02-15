@@ -7,36 +7,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        void: "#0A0A0A",
-        charcoal: "#121212",
-        starlight: "#F4F4F5",
-        electric: "#6366F1",
-        teal: "#14B8A6",
-        subtle: "#A1A1AA",
-        border: "#27272A",
+        // Warmer, softer dark theme
+        bg: "#18181B", // Zinc 950
+        surface: "#27272A", // Zinc 800
+        text: "#F4F4F5", // Zinc 100
+        muted: "#A1A1AA", // Zinc 400
+        border: "#3F3F46", // Zinc 700
+
+        // Natural accents
+        primary: "#2DD4BF", // Teal 400 (Research/Tech)
+        secondary: "#FB923C", // Orange 400 (Warmth/Human)
+        accent: "#8B5CF6", // Violet 500 (Creative)
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+        sans: ['"Inter"', 'sans-serif'],
+        serif: ['"Lora"', 'serif'], // For headings
         mono: ['"JetBrains Mono"', 'monospace'],
       },
-      boxShadow: {
-        'glow': '0 0 20px rgba(99, 102, 241, 0.3)',
-        'ambient': '0 10px 30px -10px rgba(0, 0, 0, 0.5)',
-      },
-      animation: {
-        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-        'float': 'float 6s ease-in-out infinite',
-      },
-      keyframes: {
-        fadeInUp: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
-      },
+      backgroundImage: {
+        'paper-texture': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')",
+      }
     },
   },
   plugins: [],
