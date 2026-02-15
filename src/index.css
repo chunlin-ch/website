@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-void: #0A0A0A;
+    --color-charcoal: #121212;
+    --color-starlight: #F4F4F5;
+    --color-electric: #6366F1;
+  }
+
+  body {
+    @apply bg-void text-starlight antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-electric to-pink-500;
+}

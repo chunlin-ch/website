@@ -1,0 +1,30 @@
+DNS Change Log for chunlin.ch
+=============================
+Date: 2026-02-15
+Time: 09:56:09+08:00
+Status: SUCCESSFUL
+
+Action: Updated nameservers from AWS Default to Cloudflare.
+
+---
+Command Executed:
+aws route53domains update-domain-nameservers \
+    --region us-east-1 \
+    --domain-name chunlin.ch \
+    --nameservers Name=ines.ns.cloudflare.com Name=james.ns.cloudflare.com
+
+Operation Details:
+- Operation ID: d96f0030-0840-49f2-a7ae-2316fb4b2be2
+- Outcome: Nameserver update submitted and confirmed successful.
+- Submitted: 2026-02-15T09:56:09.738000+08:00
+- Verified: 2026-02-15T09:56:19.883000+08:00
+
+Previous Nameservers (AWS Default):
+- ns-1477.awsdns-56.org
+- ns-1991.awsdns-56.co.uk
+- ns-400.awsdns-50.com
+- ns-667.awsdns-19.net
+
+New Nameservers (Cloudflare):
+- ines.ns.cloudflare.com
+- james.ns.cloudflare.com
