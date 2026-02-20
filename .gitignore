@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Photo staging (uploaded to R2, not committed)
+photos-staging/

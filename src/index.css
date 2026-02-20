@@ -26,3 +26,38 @@
 ::-webkit-scrollbar-thumb {
   @apply bg-border rounded-full hover:bg-muted transition-colors;
 }
+
+/* Leaflet popup overrides for dark theme */
+.leaflet-popup-content-wrapper {
+  background: #18181B !important;
+  border: 1px solid #3F3F46 !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+}
+
+.leaflet-popup-tip {
+  background: #18181B !important;
+  border: 1px solid #3F3F46 !important;
+}
+
+.leaflet-popup-close-button {
+  color: #A1A1AA !important;
+  font-size: 18px !important;
+  padding: 6px 8px !important;
+}
+
+.leaflet-popup-close-button:hover {
+  color: #2DD4BF !important;
+}
+
+/* Anti-download: disable image selection globally in gallery */
+.select-none {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}

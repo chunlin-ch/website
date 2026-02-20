@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "hello-world",
+    "title": "Hello World: My First Blog Post",
+    "date": "2024-02-18",
+    "description": "Setting up a blog with Obsidian and React.",
+    "tags": [
+      "Meta",
+      "WebDev"
+    ],
+    "published": true,
+    "content": "\n# Welcome to my blog\n\nThis is the first post on my new blog system. It is written in **Obsidian** and automatically deployed to my website.\n\n## How it works\n\n1. I write in Obsidian.\n2. I push to GitHub.\n3. Cloudflare builds the site.\n\n### Code Example\n\n```javascript\nconsole.log(\"Hello, World!\");\n```\n\nEnjoy!\n"
+  }
+]

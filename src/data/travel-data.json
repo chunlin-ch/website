@@ -1,0 +1,116 @@
+[
+    {
+        "id": "tokyo-2023",
+        "name": "东京 · Tokyo",
+        "country": "日本",
+        "coordinates": [
+            35.6762,
+            139.6503
+        ],
+        "date": "2023-10",
+        "coverImage": "/travel/demo/tokyo-cover.jpg",
+        "photos": [
+            {
+                "src": "/travel/demo/tokyo-01.jpg",
+                "caption": "浅草寺雷门",
+                "autoGeo": true
+            },
+            {
+                "src": "/travel/demo/tokyo-02.jpg",
+                "caption": "东京塔夜景",
+                "autoGeo": true
+            },
+            {
+                "src": "/travel/demo/tokyo-03.jpg",
+                "caption": "涩谷十字路口",
+                "autoGeo": true
+            }
+        ],
+        "description": "秋季东京之旅，从浅草到涩谷",
+        "blogSlug": null,
+        "autoGeo": true
+    },
+    {
+        "id": "chengdu-2024",
+        "name": "成都 · Chengdu",
+        "country": "中国",
+        "coordinates": [
+            30.5728,
+            104.0668
+        ],
+        "date": "2024-03",
+        "coverImage": "/travel/demo/chengdu-cover.jpg",
+        "photos": [
+            {
+                "src": "/travel/demo/chengdu-01.jpg",
+                "caption": "宽窄巷子",
+                "autoGeo": true
+            },
+            {
+                "src": "/travel/demo/chengdu-02.jpg",
+                "caption": "人民公园鹤鸣茶社",
+                "autoGeo": true
+            }
+        ],
+        "description": "日常记录，生活在这座城市",
+        "blogSlug": null,
+        "autoGeo": true
+    },
+    {
+        "id": "paris-2022",
+        "name": "巴黎 · Paris",
+        "country": "法国",
+        "coordinates": [
+            48.8566,
+            2.3522
+        ],
+        "date": "2022-07",
+        "coverImage": "/travel/demo/paris-cover.jpg",
+        "photos": [
+            {
+                "src": "/travel/demo/paris-01.jpg",
+                "caption": "埃菲尔铁塔",
+                "autoGeo": true
+            },
+            {
+                "src": "/travel/demo/paris-02.jpg",
+                "caption": "卢浮宫",
+                "autoGeo": true
+            },
+            {
+                "src": "/travel/demo/paris-03.jpg",
+                "caption": "塞纳河畔",
+                "autoGeo": true
+            }
+        ],
+        "description": "夏日巴黎，艺术与浪漫",
+        "blogSlug": null,
+        "autoGeo": true
+    },
+    {
+        "id": "kyoto-2023",
+        "name": "京都 · Kyoto",
+        "country": "日本",
+        "coordinates": [
+            35.0116,
+            135.7681
+        ],
+        "date": "2023-11",
+        "coverImage": "/travel/demo/kyoto-cover.jpg",
+        "photos": [
+            {
+                "src": "/travel/demo/kyoto-01.jpg",
+                "caption": "伏见稻荷大社千本鸟居",
+                "autoGeo": true
+            },
+            {
+                "src": "/travel/demo/kyoto-02.jpg",
+                "caption": "岚山竹林",
+                "autoGeo": true
+            }
+        ],
+        "description": "红叶季的京都，千年古都",
+        "blogSlug": null,
+        "autoGeo": true
+    }
+]
