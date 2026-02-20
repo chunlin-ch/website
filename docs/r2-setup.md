@@ -50,18 +50,31 @@ wrangler r2 bucket list
 
 ## 第四步：配置 CORS（允许网站访问图片）
 
-在 R2 bucket Settings 中，找到 **CORS Policy**，添加：
+在 R2 bucket Settings 中，找到 **CORS Policy**，点击 **Add CORS policy**。
+
+> [!IMPORTANT]
+> R2 的 CORS 不支持端口通配符（如 `http://localhost:*`），需要写具体端口。
 
 ```json
 [
   {
-    "AllowedOrigins": ["https://chunlin.ch", "http://localhost:*"],
-    "AllowedMethods": ["GET"],
+    "AllowedOrigins": [
+      "https://chunlin.ch",
+      "https://www.chunlin.ch",
+      "http://localhost:5173"
+    ],
+    "AllowedMethods": ["GET", "HEAD"],
     "AllowedHeaders": ["*"],
     "MaxAgeSeconds": 86400
   }
 ]
 ```
+
+如果用 Dashboard UI 填写（非 JSON 模式），则逐项填入：
+- **Allowed Origins**: `https://chunlin.ch`, `https://www.chunlin.ch`, `http://localhost:5173`
+- **Allowed Methods**: `GET`, `HEAD`
+- **Allowed Headers**: `*`
+- **Max Age**: `86400`
 
 ## 第五步：配置防盗链（可选但推荐）
 
