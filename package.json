@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "process-photos": "node scripts/process-photos.js",
     "upload-photos": "node scripts/upload-photos.js",
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name=chunlin-ch",
     "preview": "vite preview"
   },
   "dependencies": {
