@@ -4,6 +4,7 @@ import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet';
 import { Icon } from 'leaflet';
 import { ArrowLeft, Save, Plus, Trash2, MapPin, Upload } from 'lucide-react';
 import travelData from './data/travel-data.json';
+import logo from './assets/logo.svg';
 import 'leaflet/dist/leaflet.css';
 
 interface Photo {
@@ -121,8 +122,9 @@ function TravelAdmin() {
                 {/* Header */}
                 <div className="flex items-center justify-between mb-8">
                     <div>
-                        <Link to="/travel" className="inline-flex items-center text-muted hover:text-primary mb-4 transition-colors">
-                            <ArrowLeft size={16} className="mr-2" /> Back to Travel
+                        <Link to="/travel" className="inline-flex items-center text-muted hover:text-primary mb-4 transition-colors group">
+                            <ArrowLeft size={16} className="mr-3 group-hover:-translate-x-1 transition-transform" />
+                            <img src={logo} alt="Chunlin.ch" className="h-[28px] md:h-[32px]" />
                         </Link>
                         <h1 className="text-2xl font-bold font-mono text-primary">&gt; travel-data --edit</h1>
                         <p className="text-muted text-sm mt-1">Edit location info, set coordinates, then export JSON.</p>

@@ -1,6 +1,7 @@
 import { Link, useSearchParams } from 'react-router-dom';
 import postsData from './data/posts.json';
 import { ArrowLeft, X } from 'lucide-react';
+import logo from './assets/logo.svg';
 
 function BlogList() {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -28,8 +29,9 @@ function BlogList() {
         <div className="min-h-screen bg-bg text-text font-sans flex flex-col items-center py-12 px-6">
             <div className="w-full max-w-2xl">
                 <div className="mb-12">
-                    <Link to="/" className="inline-flex items-center text-muted hover:text-primary mb-6 transition-colors">
-                        <ArrowLeft size={16} className="mr-2" /> Back to Home
+                    <Link to="/" className="inline-flex items-center text-muted hover:text-primary mb-6 transition-colors group">
+                        <ArrowLeft size={16} className="mr-3 group-hover:-translate-x-1 transition-transform" />
+                        <img src={logo} alt="Chunlin.ch" className="h-[28px] md:h-[32px]" />
                     </Link>
                     <h1 className="text-4xl font-serif font-bold text-text">Blog</h1>
                     <p className="text-muted mt-2">Thoughts, notes, and research updates.</p>
@@ -43,8 +45,8 @@ function BlogList() {
                                 key={tag}
                                 onClick={() => handleTagClick(tag)}
                                 className={`text-xs px-3 py-1.5 rounded-full border transition-all cursor-pointer ${activeTag?.toLowerCase() === tag.toLowerCase()
-                                        ? 'bg-primary/20 text-primary border-primary/50'
-                                        : 'bg-white/5 text-muted border-white/10 hover:text-primary hover:border-primary/30'
+                                    ? 'bg-primary/20 text-primary border-primary/50'
+                                    : 'bg-white/5 text-muted border-white/10 hover:text-primary hover:border-primary/30'
                                     }`}
                             >
                                 #{tag}
@@ -82,8 +84,8 @@ function BlogList() {
                                     <div className="flex gap-2">
                                         {post.tags.map(tag => (
                                             <span key={tag} className={`text-xs px-2 py-1 rounded-full border ${activeTag?.toLowerCase() === tag.toLowerCase()
-                                                    ? 'bg-primary/20 text-primary border-primary/50'
-                                                    : 'bg-white/5 text-primary/80 border-white/5'
+                                                ? 'bg-primary/20 text-primary border-primary/50'
+                                                : 'bg-white/5 text-primary/80 border-white/5'
                                                 }`}>
                                                 #{tag}
                                             </span>

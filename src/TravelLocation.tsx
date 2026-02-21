@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, MapPin, Image as ImageIcon, ExternalLink } from 'lucide-react';
 import { useEffect, useState, useCallback } from 'react';
 import travelData from './data/travel-data.json';
+import logo from './assets/logo.svg';
 
 interface Photo {
     src: string;
@@ -76,8 +77,9 @@ function TravelLocation() {
         <div className="min-h-screen bg-bg text-text font-sans">
             <div className="max-w-5xl mx-auto px-6 py-12">
                 {/* Header */}
-                <Link to="/travel" className="inline-flex items-center text-muted hover:text-primary mb-8 transition-colors">
-                    <ArrowLeft size={16} className="mr-2" /> Back to Travel
+                <Link to="/travel" className="inline-flex items-center text-muted hover:text-primary mb-8 transition-colors group">
+                    <ArrowLeft size={16} className="mr-3 group-hover:-translate-x-1 transition-transform" />
+                    <img src={logo} alt="Chunlin.ch" className="h-[28px] md:h-[32px]" />
                 </Link>
 
                 <header className="mb-12 pb-8 border-b border-border">

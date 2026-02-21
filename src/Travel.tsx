@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Icon } from 'leaflet';
 import { ArrowLeft, MapPin, Calendar, Image } from 'lucide-react';
 import travelData from './data/travel-data.json';
+import logo from './assets/logo.svg';
 import 'leaflet/dist/leaflet.css';
 
 // Custom marker icon (teal colored pin)
@@ -43,8 +44,9 @@ function Travel() {
             <div className="max-w-6xl mx-auto px-6 py-12">
                 {/* Header */}
                 <div className="mb-12">
-                    <Link to="/" className="inline-flex items-center text-muted hover:text-primary mb-6 transition-colors">
-                        <ArrowLeft size={16} className="mr-2" /> Back to Home
+                    <Link to="/" className="inline-flex items-center text-muted hover:text-primary mb-6 transition-colors group">
+                        <ArrowLeft size={16} className="mr-3 group-hover:-translate-x-1 transition-transform" />
+                        <img src={logo} alt="Chunlin.ch" className="h-[28px] md:h-[32px]" />
                     </Link>
                     <h1 className="text-xs font-bold tracking-widest text-primary uppercase font-mono mb-4">&gt; ls ~/travel</h1>
                     <p className="text-muted font-mono text-sm">
