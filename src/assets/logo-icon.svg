@@ -1,5 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <path d="M 80 35 A 25 25 0 1 0 80 85" fill="none" stroke="#2DD4BF" stroke-width="12" stroke-linecap="round"/>
-  <path d="M 65 48 A 12 12 0 1 0 65 72" fill="none" stroke="#FB923C" stroke-width="12" stroke-linecap="round"/>
-  <circle cx="80" cy="60" r="6" fill="#8B5CF6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <!-- C Neon Gradient -->
+    <linearGradient id="gradC" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2DD4BF" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+
+    <!-- Cursor Neon Gradient -->
+    <linearGradient id="gradCursor" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#FB923C" />
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="glowC" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="16" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glowCursor" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="4" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ambient Light Center -->
+  <circle cx="100" cy="100" r="50" fill="#2DD4BF" opacity="0.15" filter="url(#glowC)" />
+
+  <!-- The "C_" Mark -->
+  <g transform="translate(-7, 10)">
+    <!-- Letter C -->
+    <path d="M 115 50 
+             A 45 45 0 1 0 115 130" 
+          fill="none" stroke="url(#gradC)" stroke-width="18" stroke-linecap="round" filter="url(#glowC)" opacity="0.65"/>
+    <path d="M 115 50 
+             A 45 45 0 1 0 115 130" 
+          fill="none" stroke="url(#gradC)" stroke-width="18" stroke-linecap="round"/>
+          
+    <!-- Cursor _ -->
+    <line x1="125" y1="130" x2="165" y2="130" stroke="url(#gradCursor)" stroke-width="18" stroke-linecap="round" filter="url(#glowCursor)" opacity="0.8"/>
+    <line x1="125" y1="130" x2="165" y2="130" stroke="url(#gradCursor)" stroke-width="18" stroke-linecap="round"/>
+  </g>
 </svg>

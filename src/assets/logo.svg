@@ -1,13 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80">
-  <!-- Outer C -->
-  <path d="M 60 20 A 20 20 0 1 0 60 60" fill="none" stroke="#2DD4BF" stroke-width="10" stroke-linecap="round"/>
-  <!-- Inner C -->
-  <path d="M 45 30 A 10 10 0 1 0 45 50" fill="none" stroke="#FB923C" stroke-width="10" stroke-linecap="round"/>
-  <!-- Dot -->
-  <circle cx="60" cy="40" r="5" fill="#8B5CF6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&amp;display=swap');
+      .text-main { font-family: 'JetBrains Mono', monospace, sans-serif; font-size: 72px; font-weight: 700; fill: #F4F4F5; letter-spacing: -4px; }
+      .text-dot { fill: #2DD4BF; }
+      .text-ch { fill: #A1A1AA; }
+    </style>
+    <!-- C Neon Gradient -->
+    <linearGradient id="gradC" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2DD4BF" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
 
-  <!-- Text -->
-  <text x="90" y="50" font-family="'JetBrains Mono', monospace, sans-serif" font-size="32" font-weight="700" fill="#F4F4F5" letter-spacing="-1">
-      chunlin<tspan fill="#2DD4BF">.</tspan><tspan fill="#A1A1AA">ch</tspan>
-  </text>
+    <!-- Cursor Neon Gradient -->
+    <linearGradient id="gradCursor" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#FB923C" />
+    </linearGradient>
+
+    <filter id="glowC" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="16" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glowCursor" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="4" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g transform="translate(10, 10)">
+    <!-- Scale Mark down so it sits perfectly matched with text -->
+    <g transform="scale(0.5) translate(-7, 10)">
+        <path d="M 115 50 A 45 45 0 1 0 115 130" fill="none" stroke="url(#gradC)" stroke-width="18" stroke-linecap="round" filter="url(#glowC)" opacity="0.65"/>
+        <path d="M 115 50 A 45 45 0 1 0 115 130" fill="none" stroke="url(#gradC)" stroke-width="18" stroke-linecap="round"/>
+        
+        <line x1="125" y1="130" x2="165" y2="130" stroke="url(#gradCursor)" stroke-width="18" stroke-linecap="round" filter="url(#glowCursor)" opacity="0.8"/>
+        <line x1="125" y1="130" x2="165" y2="130" stroke="url(#gradCursor)" stroke-width="18" stroke-linecap="round"/>
+    </g>
+
+    <text x="100" y="78" class="text-main">chunlin<tspan class="text-dot">.</tspan><tspan class="text-ch">ch</tspan></text>
+  </g>
 </svg>

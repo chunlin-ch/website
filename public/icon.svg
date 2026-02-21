@@ -1,6 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <rect width="120" height="120" rx="28" fill="#18181B" stroke="#3F3F46" stroke-width="4"/>
-  <path d="M 80 35 A 25 25 0 1 0 80 85" fill="none" stroke="#2DD4BF" stroke-width="12" stroke-linecap="round"/>
-  <path d="M 65 48 A 12 12 0 1 0 65 72" fill="none" stroke="#FB923C" stroke-width="12" stroke-linecap="round"/>
-  <circle cx="80" cy="60" r="6" fill="#8B5CF6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090B" />
+      <stop offset="100%" stop-color="#18181B" />
+    </linearGradient>
+
+    <!-- Tech Grid Pattern -->
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#27272A" stroke-width="1.5" />
+      <circle cx="24" cy="24" r="1.5" fill="#3F3F46" />
+    </pattern>
+
+    <!-- C Neon Gradient -->
+    <linearGradient id="gradC" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2DD4BF" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+
+    <!-- Cursor Neon Gradient -->
+    <linearGradient id="gradCursor" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#FB923C" />
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="glowC" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="16" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glowCursor" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="4" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" rx="46" fill="url(#bg)" />
+  <rect width="200" height="200" rx="46" fill="url(#grid)" />
+
+  <!-- Inner border for aesthetic -->
+  <rect x="2" y="2" width="196" height="196" rx="44" fill="none" stroke="#2dd4bf" stroke-opacity="0.1" stroke-width="1.5" />
+
+  <!-- Ambient Backglow -->
+  <circle cx="100" cy="100" r="50" fill="#2DD4BF" opacity="0.15" filter="url(#glowC)" />
+
+  <!-- The "C_" Mark -->
+  <g transform="translate(-7, 10)">
+    <!-- Letter C Glow Layer -->
+    <path d="M 115 50 
+             A 45 45 0 1 0 115 130" 
+          fill="none" stroke="url(#gradC)" stroke-width="18" stroke-linecap="round" filter="url(#glowC)" opacity="0.65"/>
+    <!-- Letter C Core Layer -->
+    <path d="M 115 50 
+             A 45 45 0 1 0 115 130" 
+          fill="none" stroke="url(#gradC)" stroke-width="18" stroke-linecap="round"/>
+          
+    <!-- Cursor _ Glow Layer -->
+    <line x1="125" y1="130" x2="165" y2="130" stroke="url(#gradCursor)" stroke-width="18" stroke-linecap="round" filter="url(#glowCursor)" opacity="0.8"/>
+    <!-- Cursor _ Core Layer -->
+    <line x1="125" y1="130" x2="165" y2="130" stroke="url(#gradCursor)" stroke-width="18" stroke-linecap="round"/>
+  </g>
 </svg>

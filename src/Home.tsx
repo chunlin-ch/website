@@ -46,8 +46,8 @@ function Home() {
                 {/* Left Column: Fixed Profile (Sticky on Desktop) */}
                 <header className="md:sticky md:top-24 h-fit space-y-8">
                     <div className="space-y-4">
-                        <div className="w-24 h-24 rounded-full bg-surface border border-border flex items-center justify-center text-3xl font-serif text-primary">
-                            <img src={logoIcon} alt="Logo" className="w-14 h-14" />
+                        <div className="w-24 h-24 rounded-full bg-surface/50 border border-border flex items-center justify-center text-3xl font-serif text-primary shadow-lg shadow-black/20">
+                            <img src={logoIcon} alt="Logo" className="w-[84px] h-[84px] ml-1" />
                         </div>
                         <div>
                             <h1 className="text-4xl font-serif font-bold tracking-tight mb-2">Chen Chunlin</h1>
