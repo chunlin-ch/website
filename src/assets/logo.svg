@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80">
+  <!-- Outer C -->
+  <path d="M 60 20 A 20 20 0 1 0 60 60" fill="none" stroke="#2DD4BF" stroke-width="10" stroke-linecap="round"/>
+  <!-- Inner C -->
+  <path d="M 45 30 A 10 10 0 1 0 45 50" fill="none" stroke="#FB923C" stroke-width="10" stroke-linecap="round"/>
+  <!-- Dot -->
+  <circle cx="60" cy="40" r="5" fill="#8B5CF6"/>
+
+  <!-- Text -->
+  <text x="90" y="50" font-family="'JetBrains Mono', monospace, sans-serif" font-size="32" font-weight="700" fill="#F4F4F5" letter-spacing="-1">
+      chunlin<tspan fill="#2DD4BF">.</tspan><tspan fill="#A1A1AA">ch</tspan>
+  </text>
+</svg>

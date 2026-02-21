@@ -1,6 +1,7 @@
 import { Github, Mail, ArrowUpRight, Database, MapPin, Camera, CircleDot, BookOpen } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect, useCallback, useRef } from 'react';
+import logoIcon from './assets/logo-icon.svg';
 
 const INTERESTS = [
     {
@@ -46,7 +47,7 @@ function Home() {
                 <header className="md:sticky md:top-24 h-fit space-y-8">
                     <div className="space-y-4">
                         <div className="w-24 h-24 rounded-full bg-surface border border-border flex items-center justify-center text-3xl font-serif text-primary">
-                            CC
+                            <img src={logoIcon} alt="Logo" className="w-14 h-14" />
                         </div>
                         <div>
                             <h1 className="text-4xl font-serif font-bold tracking-tight mb-2">Chen Chunlin</h1>
